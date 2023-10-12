@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Demand and supply chain</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.js" integrity="sha512-o4gKX6jcK0rdciOZ9X8COYkV9gviTJAbYEVW8aC3OgIRuaKDmcT9/OFXBVzHSSOxiTjsTktqrUvCUrHkQHSn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    body{
+        background-image: url('data:image/jpeg;base64,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');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #form1{
+      width: 50%;
+      margin: auto;
+      padding: 25px 50px;
+      background-color: rgba(0, 0, 0, 0.70);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">DEMAND AND SUPPLY CHAIN SYSTEM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Demandcheck">Demandcheck</a></li>
+        <li><a href="/Suggestion">Suggestion</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  {% if msg %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{ msg }}</strong>
+  </div>
+  {% endif %}
+
+  {% if msg1 %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{ msg1 }}</strong>&nbsp;&nbsp;&nbsp; <a href="/Suggestion" class="btn btn-success">Suggestion</a>
+  </div>
+  {% endif %}
+
+    <form  method="post" action="{{ url_for('demand')}}" id="form1" class="active">
+      <center><h2>DEMAND CHECK</h2></center>
+      <hr>
+      <div class="form-group">
+        <label for="acres">Acres:</label>
+        <input type="number" class="form-control" id="acres" placeholder="Enter acres" name="acres">
+      </div>
+      <div class="form-group">
+        <label for="crop">Crop:</label>
+        <select name="crop" class="form-control" id="crop" required>
+          <option value="Rice">Rice</option>
+            <option value="Maize">Maize</option>
+            <option value="Chickpea">Chickpea</option>
+            <option value="Kidneybeans">Kidneybeans</option>
+            <option value="Pigeonpeas">Pigeonpeas</option>
+            <option value="Mothbeans">Mothbeans</option>
+            <option value="Mungbean">Mungbean</option>
+            <option value="Blackgram">Blackgram</option>
+            <option value="Lentil">Lentil</option>
+            <option value="Pomegranate">Pomegranate</option>
+            <option value="Banana">Banana</option>
+            <option value="Mango">Mango</option>
+            <option value="Grapes">Grapes</option>
+            <option value="Watermelon">Watermelon</option>
+            <option value="Muskmelon">Muskmelon</option>
+            <option value="Apple">Apple</option>
+            <option value="Orange">Orange</option>
+            <option value="Papaya">Papaya</option>
+            <option value="Coconut">Coconut</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Jute">Jute</option>
+            <option value="Coffee">Coffee</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button></br></br>
+    </form>
+</div>
+
+</body>
+</html>
